@@ -15,20 +15,37 @@ library(tidyverse)
 ```{r}
 filter(mpg, year==2008 & hwy>31)
 ```
+<span style="color:green">BIEN
+</span>
+
 #2.Seleccionar las observaciones con cty igual a 9 o con hwy mayor a 90
 ```{r}
 filter(mpg, cty==9 | hwy>90)
 ```
+<span style="color:green">BIEN
+</span>
+
 #3.Seleccionar las variables displ y hwy
 ```{r}
 select(mpg,displ,hwy)
 ```
+<span style="color:green">BIEN</span>
+
 #4.Seleccionar desde la variable trans hasta hwy
 ```{r}
 select(mpg,trans:hwy)
 ```
+<span style="color:green">BIEN</span>
 #5.Crear una nueva variable que transforme hwy (millas por galón) en litros/100 km 
 ```{r}
 mutate(mpg,hwy2=hwy*1.60934/(3.78541*100))
 ```
 
+
+<span style="color:green"> La cuenta que hay que hacer es
+mpg %>% mutate(hwylkm = (3.78541/1.60934)*100/hwy)
+</span>
+
+
+<span style="color:green"> Te faltó hacer todo el ejercicio de exploración con los datos de felicidad. PUNTOS: 3/10
+</span>
